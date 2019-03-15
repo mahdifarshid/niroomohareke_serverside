@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" dir="rtl" lang="fa-IR" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" dir="rtl" lang="fa-IR" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" dir="rtl" lang="fa-IR" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if gt IE 8]> <html class="no-js" dir="rtl" lang="fa-IR" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" style="overflow-y: hidden;"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<title>RESTful چیست ؟ - آموزش برنامه نویسی</title>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://programchi.ir/xmlrpc.php">
+
+<!-- This site is optimized with the Yoast SEO Premium plugin v4.4 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://programchi.ir/2018/08/24/restful-%da%86%db%8c%d8%b3%d8%aa-%d8%9f/">
+<meta property="og:locale" content="fa_IR">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RESTful چیست ؟ - آموزش برنامه نویسی">
+<meta property="og:description" content="سلام توسعه دهندگان گرامی در این مقاله به بررسی&nbsp;RESTful چیست ؟ می پردازیم&nbsp;&nbsp;RESTful&nbsp;(یا REST مخفف Representational state transfer) یک سبک معماری است که پاسخ گوی درخواست هایی که از سمت سرور ارسال می شود است rest را شاید در نام های مختلفی دیده باشید مثل&nbsp;RESTful APIs , REST در ادامه&nbsp;RESTful را کمی بیشتر باز کرده …">
+<meta property="og:url" content="https://programchi.ir/2018/08/24/restful-%da%86%db%8c%d8%b3%d8%aa-%d8%9f/">
+<meta property="og:site_name" content="آموزش برنامه نویسی">
+<meta property="article:author" content="http://facebook.com/mohammadhosseinjafaripour">
+<meta property="article:tag" content="api">
+<meta property="article:tag" content="rest">
+<meta property="article:tag" content="Api چیست">
+<meta property="article:tag" content="REST API">
+<meta property="article:tag" content="restful">
+<meta property="article:tag" content="API چیست ؟">
+<meta property="article:tag" content="RESTful API چیست ؟">
+<meta property="article:tag" content="restful چیست">
+<meta property="article:tag" content="restful api">
+<meta property="article:tag" content="restful api چیست">
+<meta property="article:tag" content="RESTful چیست ؟">
+<meta property="article:tag" content="web api">
+<meta property="article:tag" content="رستفول چیست ؟">
+<meta property="article:tag" content="رست فول چیست ؟">
+<meta property="article:tag" content="رست فوا ای پی ای">
+<meta property="article:tag" content="رست فوا ای پی ای چیست">
+<meta property="article:tag" content="restful ای پی ای چیست ؟">
+<meta property="article:tag" content="restful ای پی ای">
+<meta property="article:tag" content="api rest">
+<meta property="article:tag" content="restful api in programming">
+<meta property="article:tag" content="what is restful api">
+<meta property="article:section" content="کاربردی">
+<meta property="article:published_time" content="۱۳۹۷-۰۶-۰۲T04:54:24+00:00">
+<meta property="og:image" content="https://programchi.ir/wp-content/uploads/2018/08/scientific-what-is-restful-api-min.png">
+<meta property="og:image:width" content="870">
+<meta property="og:image:height" content="470">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="سلام توسعه دهندگان گرامی در این مقاله به بررسی&nbsp;RESTful چیست ؟ می پردازیم&nbsp;&nbsp;RESTful&nbsp;(یا REST مخفف Representational state transfer) یک سبک معماری است که پاسخ گوی درخواست هایی که از سمت سرور ارسال می شود است rest را شاید در نام های مختلفی دیده باشید مثل&nbsp;RESTful APIs , REST در ادامه&nbsp;RESTful را کمی بیشتر باز کرده […]">
+<meta name="twitter:title" content="RESTful چیست ؟ - آموزش برنامه نویسی">
+<meta name="twitter:image" content="https://programchi.ir/wp-content/uploads/2018/08/scientific-what-is-restful-api-min.png">
+<meta name="twitter:creator" content="@mhjfp">
+<meta property="DC.date.issued" content="۱۳۹۷-۰۶-۰۲T04:54:24+00:00">
+<!-- / Yoast SEO Premium plugin. -->
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="آموزش برنامه نویسی » خوراک" href="https://programchi.ir/feed/">
+<link rel="alternate" type="application/rss+xml" title="آموزش برنامه نویسی » خوراک دیدگاه‌ها" href="https://programchi.ir/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="آموزش برنامه نویسی » RESTful چیست ؟ خوراک دیدگاه‌ها" href="https://programchi.ir/2018/08/24/restful-%da%86%db%8c%d8%b3%d8%aa-%d8%9f/feed/">
+		<script async="" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/analytics.js"></script><script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/programchi.ir\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.11"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/wp-emoji-release.js" type="text/javascript" defer="defer"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="crayon-css" href="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/crayon.css" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-theme-classic-css" href="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/classic.css" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-font-monaco-css" href="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/monaco.css" type="text/css" media="all">
+<link rel="stylesheet" id="contact-form-7-css" href="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="contact-form-7-rtl-css" href="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/styles-rtl.css" type="text/css" media="all">
+<link rel="stylesheet" id="dot-irecommendthis-css" href="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/dot-irecommendthis.css" type="text/css" media="all">
+<link rel="stylesheet" id="uaf_client_css-css" href="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/uaf.css" type="text/css" media="all">
+<link rel="stylesheet" id="woocommerce-css" href="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/woocommerce-rtl.css" type="text/css" media="all">
+<link rel="stylesheet" id="woocommerce-responsive-css" href="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/woocommerce-media-rtl.css" type="text/css" media="all">
+<link rel="stylesheet" id="open-sans-css" href="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/css.css" type="text/css" media="all">
+<link rel="stylesheet" id="droidarabickufi-css" href="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/droidarabickufi.css" type="text/css" media="all">
+<link rel="stylesheet" id="v_base-css" href="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/base.css" type="text/css" media="all">
+<link rel="stylesheet" id="v_lists-css" href="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/lists.css" type="text/css" media="all">
+<link rel="stylesheet" id="v_bootstrap-css" href="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/bootstrap_002.css" type="text/css" media="all">
+<link rel="stylesheet" id="v_prettyPhoto-css" href="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/prettyPhoto.css" type="text/css" media="all">
+<link rel="stylesheet" id="v_font_awesome_old-css" href="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/font-awesome_002.css" type="text/css" media="all">
+<link rel="stylesheet" id="v_font_awesome-css" href="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/font-awesome.css" type="text/css" media="all">
+<link rel="stylesheet" id="v_fontello-css" href="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/fontello.css" type="text/css" media="all">
+<link rel="stylesheet" id="v_enotype-css" href="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/enotype.css" type="text/css" media="all">
+<link rel="stylesheet" id="v_css-css" href="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="v_bootstrap_ar-css" href="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/bootstrap.css" type="text/css" media="all">
+<link rel="stylesheet" id="v_responsive-css" href="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/responsive.css" type="text/css" media="all">
+<link rel="stylesheet" id="skin-green-css" href="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/green.css" type="text/css" media="all">
+<link rel="stylesheet" id="vpanel_custom-css" href="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/custom.css" type="text/css" media="all">
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/jquery_010.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/jquery-migrate.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"_2.7.2_beta","is_admin":"0","ajaxurl":"https:\/\/programchi.ir\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/crayon.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/woocommerce.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/jquery_011.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/html5.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/jquery_013.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/jflickrfeed.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/jquery_012.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/jquery_005.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/tabs.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/jquery_006.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/jquery_008.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/jquery_003.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/jquery_007.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/jquery_004.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/tags.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/jquery.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/jquery_009.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/core.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/widget.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/mouse.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/sortable.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var template_url = "https:\/\/programchi.ir\/wp-content\/themes\/ProgramChi.ir";
+var products_excerpt_title = "40";
+var go_to = "Go to...";
+var ask_error_text = "\u0644\u0637\u0641\u0627 \u0627\u06cc\u0646 \u0641\u06cc\u0644\u062f \u0631\u0627 \u067e\u0631 \u06a9\u0646\u06cc\u062f.";
+var ask_error_captcha = "The captcha is incorrect, please try again.";
+var captcha_answer = "programchi";
+var add_question = "https:\/\/programchi.ir\/%d8%b3%d9%88%d8%a7%d9%84-%d8%ac%d8%af%db%8c%d8%af\/";
+var ask_error_empty = "\u062a\u0645\u0627\u0645\u06cc \u0641\u06cc\u0644\u062f \u0647\u0627 \u0628\u0627\u06cc\u062f \u062a\u06a9\u0645\u06cc\u0644 \u0634\u062f\u0647 \u0628\u0627\u0634\u0646\u062f.";
+var no_vote_more = "\u0634\u0645\u0627 \u0641\u0642\u0637 \u0645\u06cc \u062a\u0648\u0627\u0646\u06cc\u062f \u06cc\u06a9 \u0628\u0627\u0631 \u0631\u0627\u06cc \u062f\u0647\u06cc\u062f !";
+var no_vote_user = "\u0631\u0627\u06cc \u062f\u0627\u062f\u0646 \u0641\u0642\u0637 \u0628\u0631\u0627\u06cc \u0627\u0639\u0636\u0627 \u0641\u0639\u0627\u0644 \u0645\u06cc \u0628\u0627\u0634\u062f.";
+var no_vote_more_comment = "\u0634\u0645\u0627 \u0645\u06cc \u062a\u0648\u0627\u0646\u06cc\u062f \u0641\u0642\u0637 \u06cc\u06a9 \u0628\u0627\u0631 \u0631\u0627\u06cc \u062f\u0647\u06cc\u062f !";
+var v_get_template_directory_uri = "https:\/\/programchi.ir\/wp-content\/themes\/ProgramChi.ir";
+var sure_report = "\u0645\u0637\u0645\u0626\u0646\u06cc\u062f \u06a9\u0647 \u0645\u06cc \u062e\u0648\u0627\u0647\u06cc\u062f \u0627\u06cc\u0646 \u0645\u0637\u0644\u0628 \u0631\u0627 \u06af\u0632\u0627\u0631\u0634 \u06a9\u0646\u06cc\u062f \u061f";
+var sure_delete = "\u0622\u06cc\u0627 \u0645\u0637\u0645\u0626\u0646 \u0647\u0633\u062a\u06cc\u062f \u06a9\u0647 \u0645\u06cc \u062e\u0648\u0627\u0647\u06cc\u062f \u0633\u0648\u0627\u0644 \u0631\u0627 \u062d\u0630\u0641 \u06a9\u0646\u06cc\u062f \u061f";
+var sure_delete_post = "\u0622\u06cc\u0627 \u0645\u0637\u0645\u0626\u0646 \u0647\u0633\u062a\u06cc\u062f \u06a9\u0647 \u0645\u06cc \u062e\u0648\u0627\u0647\u06cc\u062f \u067e\u0633\u062a \u0631\u0627 \u062d\u0630\u0641 \u06a9\u0646\u06cc\u062f \u061f";
+var reported_question = "\u0633\u0648\u0627\u0644 \u06af\u0632\u0627\u0631\u0634 \u0634\u062f.";
+var choose_best_answer = "\u0627\u0646\u062a\u062e\u0627\u0628 \u0628\u0647 \u0639\u0646\u0648\u0627\u0646 \u0628\u0647\u062a\u0631\u06cc\u0646 \u067e\u0627\u0633\u062e";
+var cancel_best_answer = "\u0644\u063a\u0648 \u06a9\u0631\u062f\u0646 \u0628\u0647\u062a\u0631\u06cc\u0646 \u067e\u0627\u0633\u062e";
+var best_answer = "\u0628\u0647\u062a\u0631\u06cc\u0646 \u067e\u0627\u0633\u062e";
+var follow_question_attr = "\u062f\u0646\u0628\u0627\u0644 \u06a9\u0631\u062f\u0646 \u0633\u0648\u0627\u0644";
+var unfollow_question_attr = "\u062f\u0646\u0628\u0627\u0644 \u0646\u06a9\u0631\u062f\u0646 \u0633\u0648\u0627\u0644";
+var follow_question = "\u062f\u0646\u0628\u0627\u0644 \u06a9\u0631\u062f\u0646";
+var unfollow_question = "\u062f\u0646\u0628\u0627\u0644 \u0646\u06a9\u0631\u062f\u0646";
+var admin_url = "https:\/\/programchi.ir\/wp-admin\/admin-ajax.php";
+var select_file = "\u0627\u0646\u062a\u062e\u0627\u0628 \u0641\u0627\u06cc\u0644";
+var browse = "\u0627\u0646\u062a\u062e\u0627\u0628";
+var question_tab = "programchi.ir";
+/* ]]> */
+</script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/custom.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/custom-ar.js"></script>
+<link rel="https://api.w.org/" href="https://programchi.ir/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://programchi.ir/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://programchi.ir/wp-includes/wlwmanifest.xml"> 
+<link rel="stylesheet" href="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/rtl.css" type="text/css" media="screen"><meta name="generator" content="WordPress 4.7.11">
+<meta name="generator" content="WooCommerce 3.3.4">
+<link rel="shortlink" href="https://programchi.ir/?p=63027">
+<link rel="alternate" type="application/json+oembed" href="https://programchi.ir/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fprogramchi.ir%2F2018%2F08%2F24%2Frestful-%25da%2586%25db%258c%25d8%25b3%25d8%25aa-%25d8%259f%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://programchi.ir/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fprogramchi.ir%2F2018%2F08%2F24%2Frestful-%25da%2586%25db%258c%25d8%25b3%25d8%25aa-%25d8%259f%2F&amp;format=xml">
+<link rel="shortcut icon" href="https://programchi.ir/wp-content/uploads/2017/04/favicon-32x32.png" type="image/x-icon">
+<meta property="og:site_name" content="آموزش برنامه نویسی">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://programchi.ir/wp-content/uploads/2018/08/scientific-what-is-restful-api-min-660x330.png">
+<meta property="og:title" content="RESTful چیست ؟">
+<meta property="og:url" content="https://programchi.ir/2018/08/24/restful-%da%86%db%8c%d8%b3%d8%aa-%d8%9f/">
+<meta property="og:description" content="سلام توسعه دهندگان گرامی در این مقاله به بررسی&nbsp;RESTful چیست ؟ می پردازیم&nbsp;&nbsp;RESTful&nbsp;(یا REST مخفف Representational state transfer) یک سبک معماری است که پاسخ گوی درخواست هایی که از سمت سرور ارسال می شود است rest را شاید در نام های مختلفی دیده باشید مثل&nbsp;RESTful APIs , REST در ادامه&nbsp;RESTful را کمی بیشتر باز کرده [&amp;hellip;]">
+<meta name="keywords" content="api,rest,Api چیست,REST API,restful,API چیست ؟,RESTful API چیست ؟,restful چیست,restful api,restful api چیست,RESTful چیست ؟,web api,رستفول چیست ؟,رست فول چیست ؟,رست فوا ای پی ای,رست فوا ای پی ای چیست,restful ای پی ای چیست ؟,restful ای پی ای,api rest,restful api in programming,what is restful api">
+	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-106080083-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body class="rtl post-template-default single single-post postid-63027 single-format-standard">
+	<div class="background-cover"></div>
+				<div class="panel-pop" id="signup">
+				<h2>هم اکنون عضو شوید <i class="icon-remove"></i></h2>
+				<div class="form-style form-style-3">
+					
+		<form method="post" class="signup_form ask_form" enctype="multipart/form-data"><div class="ask_error"></div>
+				<div class="form-inputs clearfix">
+					<p>
+						<label for="user_name_752" class="required">نام کاربری<span>*</span></label>
+						<input class="required-item" name="user_name" id="user_name_752" type="text">
+					</p>
+					<p>
+						<label for="email_752" class="required">ایمیل<span>*</span></label>
+						<input class="required-item" name="email" id="email_752" type="email">
+					</p>
+					<p>
+						<label for="pass1_752" class="required">گذرواژه<span>*</span></label>
+						<input class="required-item" name="pass1" id="pass1_752" autocomplete="off" type="password">
+					</p>
+					<p>
+						<label for="pass2_752" class="required">تایید گذرواژه<span>*</span></label>
+						<input class="required-item" name="pass2" id="pass2_752" autocomplete="off" type="password">
+					</p>
+							<p class="ask_captcha_p">
+								<label for="ask_captcha_752" class="required">تصویر امنیتی<span>*</span></label>
+								<input size="10" id="ask_captcha_752" name="ask_captcha" class="ask_captcha" type="text"><img class="ask_captcha_img" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/create_image.png" alt="Captcha" title="Click here to update the captcha" onclick="javascript:ask_get_captcha('https://programchi.ir/wp-content/themes/ProgramChi.ir/captcha/create_image.php', 'ask_captcha_img_752');" id="ask_captcha_img_752">
+								<span class="question_poll ask_captcha_span">برای بروز رسانی روی تصویر کلیک کنید.</span>
+							</p><p class="question_poll_p">
+							<label for="agree_terms-752" class="required">قوانین<span>*</span></label>
+							<input id="agree_terms-752" name="agree_terms" value="1" type="checkbox">
+							<span class="question_poll">قوانین را <a target="__blank" href="https://programchi.ir/%d9%82%d9%88%d8%a7%d9%86%db%8c%d9%86/">مطالعه کرده و با آنها موافقم</a>.</span>
+						</p></div>
+				<p></p>
+				<p class="form-submit">
+					<input name="redirect_to" value="https://programchi.ir/2018/08/24/restful-%da%86%db%8c%d8%b3%d8%aa-%d8%9f/" type="hidden">
+					<input name="register" value="ثبت نام" class="button color  small submit" style="" type="submit">
+					<input name="form_type" value="ask-signup" type="hidden">
+				</p>
+		</form>				</div>
+			</div><!-- End signup -->
+					<div class="panel-pop" id="login-comments">
+				<h2>ورود<i class="icon-remove"></i></h2>
+				<div class="form-style form-style-3">
+					<div class="ask_form inputs">
+			<form class="login-form ask_login" action="https://programchi.ir/" method="post">
+				<div class="ask_error"></div>
+				
+				<div class="form-inputs clearfix">
+					<p class="login-text">
+						<input class="required-item" value="نام کاربری" onfocus="if (this.value == 'نام کاربری') {this.value = '';}" onblur="if (this.value == '') {this.value = 'نام کاربری';}" name="log" type="text">
+						<i class="icon-user"></i>
+					</p>
+					<p class="login-password">
+						<input class="required-item" value="Password" onfocus="if (this.value == 'Password') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Password';}" name="pwd" type="password">
+						<i class="icon-lock"></i>
+						<a href="#">فراموشی رمز</a>
+					</p>
+				</div>
+				<p class="form-submit login-submit">
+					<span class="loader_2"></span>
+					<input value="ورود" class="button color small login-submit submit sidebar_submit" style="" type="submit">
+					
+				</p>
+				<div class="rememberme">
+					<label><input input="" name="rememberme" checked="checked" type="checkbox"> مرا به خاطر بسپار</label>
+				</div>
+				
+				<input name="redirect_to" value="https://programchi.ir/2018/08/24/restful-%da%86%db%8c%d8%b3%d8%aa-%d8%9f/" type="hidden">
+				<input name="login_nonce" value="37db0eb5b0" type="hidden">
+				<input name="ajax_url" value="https://programchi.ir/wp-admin/admin-ajax.php" type="hidden">
+				<input name="form_type" value="ask-login" type="hidden">
+				<div class="errorlogin"></div>
+			</form>
+		</div>				</div>
+			</div><!-- End login-comments -->
+					<div class="panel-pop" id="lost-password">
+				<h2>فراموشی گذرواژه<i class="icon-remove"></i></h2>
+				<div class="form-style form-style-3">
+					<p>گذروازه خود را فراموش کردید ؟</p>
+					
+		<form method="post" class="ask-lost-password ask_form" action="">
+			<div class="ask_error"></div>
+			<div class="form-inputs clearfix">
+				<p>
+					<label for="user_mail_546" class="required">ایمیل<span>*</span></label>
+					<input class="required-item" name="user_mail" id="user_mail_546" type="email">
+				</p>
+			</div>
+			<p class="form-submit">
+				<input value="درخواست رمز عبور جدید" class="button color  small submit" style="" type="submit">
+				<input name="form_type" value="ask-forget" type="hidden">
+			</p>
+		</form>					<div class="clearfix"></div>
+				</div>
+			</div><!-- End lost-password -->
+			<div id="wrap" class="grid_1200  wrap-nicescroll">
+		
+					<div class="login-panel panel_dark">
+				<section class="container">
+					<div class="row">
+													<div class="col-md-6">
+								<div class="page-content">
+									<h2>ورود</h2>
+									<div class="form-style form-style-3">
+										<div class="ask_form inputs">
+			<form class="login-form ask_login" action="https://programchi.ir/" method="post">
+				<div class="ask_error"></div>
+				
+				<div class="form-inputs clearfix">
+					<p class="login-text">
+						<input class="required-item" value="نام کاربری" onfocus="if (this.value == 'نام کاربری') {this.value = '';}" onblur="if (this.value == '') {this.value = 'نام کاربری';}" name="log" type="text">
+						<i class="icon-user"></i>
+					</p>
+					<p class="login-password">
+						<input class="required-item" value="Password" onfocus="if (this.value == 'Password') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Password';}" name="pwd" type="password">
+						<i class="icon-lock"></i>
+						<a href="#">فراموشی رمز</a>
+					</p>
+				</div>
+				<p class="form-submit login-submit">
+					<span class="loader_2"></span>
+					<input value="ورود" class="button color small login-submit submit sidebar_submit" style="" type="submit">
+					
+				</p>
+				<div class="rememberme">
+					<label><input input="" name="rememberme" checked="checked" type="checkbox"> مرا به خاطر بسپار</label>
+				</div>
+				
+				<input name="redirect_to" value="https://programchi.ir/2018/08/24/restful-%da%86%db%8c%d8%b3%d8%aa-%d8%9f/" type="hidden">
+				<input name="login_nonce" value="37db0eb5b0" type="hidden">
+				<input name="ajax_url" value="https://programchi.ir/wp-admin/admin-ajax.php" type="hidden">
+				<input name="form_type" value="ask-login" type="hidden">
+				<div class="errorlogin"></div>
+			</form>
+		</div>									</div>
+								</div><!-- End page-content -->
+							</div><!-- End col-md-6 -->
+							<div class="col-md-6">
+								<div class="page-content Register">
+									<h2>عضو شوید</h2>
+									<p>با عضویت در سایت از امکانات فوق العاده بهرمنده خواهید شد.</p>
+									<a class="button color small signup" style="">ساخت حساب کاربری</a>
+								</div><!-- End page-content -->
+							</div><!-- End col-md-6 -->
+											</div>
+				</section>
+			</div><!-- End login-panel -->
+					<div id="header-top">
+				<section class="container clearfix">
+					<div class="row">
+						<div class="col-md-6">
+							<nav class="header-top-nav">
+								<div class="header-top"><ul id="menu-topbar" class=""><li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51"><a href="https://programchi.ir/%d8%b1%d8%a7%d9%87%d9%86%d9%85%d8%a7%db%8c%db%8c/"><i class="icon-beaker"></i>راهنمایی</a></li>
+<li id="menu-item-52" class="login-panel-link menu-item menu-item-type-custom menu-item-object-custom menu-item-52"><a href="#"><i class="icon-user"></i>ورود</a></li>
+<li id="menu-item-53" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-53"><a href="https://programchi.ir/%D9%82%D9%88%D8%A7%D9%86%DB%8C%D9%86/"><i class="icon-question-sign"></i>قوانین</a></li>
+<li id="menu-item-57752" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57752"><a href="https://programchi.ir/shop"><i class="icon-shopping-cart"></i>فروشگاه</a></li>
+</ul></div>							</nav>
+							<div class="f_left language_selector">
+															</div>
+							<div class="clearfix"></div>
+						</div><!-- End col-md-6 -->
+						<div class="col-md-6">
+														<div class="clearfix"></div>
+						</div><!-- End col-md-6 -->
+					</div><!-- End row -->
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				</section><!-- End container -->
+			</div><!-- End header-top -->
+				<header id="header" class="">
+			<section class="container clearfix">
+				<div class="logo">
+										    <a class="logo-img" href="https://programchi.ir/" itemprop="url" title="آموزش برنامه نویسی">
+					    						    		<img class="default_logo" itemprop="logo" alt="آموزش برنامه نویسی" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/logo.png">
+					    						    		<img class="retina_logo" itemprop="logo" alt="آموزش برنامه نویسی" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/logo.png">
+					    						    </a>
+										<meta itemprop="name" content="آموزش برنامه نویسی">
+				</div>
+				<nav class="navigation">
+					<div class="header-menu"><ul id="menu-header-menu" class=""><li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-59"><a href="https://programchi.ir/">خانه</a></li>
+<li id="menu-item-122" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-122 parent-list"><a href="https://programchi.ir/Education">آموزش <span class="menu-nav-arrow"><i class="icon-angle-down"></i></span></a>
+<ul class="sub-menu" style="display: none;">
+	<li id="menu-item-771" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-771 parent-list"><a href="https://programchi.ir/Education">برنامه نویسی <span class="menu-nav-arrow"><i class="icon-angle-down"></i></span></a>
+	<ul class="sub-menu" style="display: none;">
+		<li id="menu-item-772" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-772"><a href="https://programchi.ir/category/%d8%a7%d9%86%d8%af%d8%b1%d9%88%db%8c%d8%af/">اندروید</a></li>
+		<li id="menu-item-775" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-775"><a href="https://programchi.ir/category/%d8%b3%db%8c-%d8%b4%d8%a7%d8%b1%d9%be/">سی شارپ</a></li>
+		<li id="menu-item-773" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-773"><a href="https://programchi.ir/category/%d8%ac%d8%a7%d9%88%d8%a7/">جاوا</a></li>
+		<li id="menu-item-774" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-774"><a href="https://programchi.ir/category/%d8%ac%db%8c-%da%a9%d9%88%d8%a6%d8%b1%db%8c/">جی کوئری</a></li>
+		<li id="menu-item-57962" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-57962"><a href="https://programchi.ir/category/%da%a9%d8%a7%d8%b1%d8%a8%d8%b1%d8%af%db%8c/">کاربردی</a></li>
+		<li id="menu-item-59667" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59667"><a href="https://programchi.ir/category/material-design/">متریال دیزاین</a></li>
+		<li id="menu-item-60147" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-60147"><a href="https://programchi.ir/category/kotlin/">کوتلین</a></li>
+		<li id="menu-item-58121" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-58121"><a href="https://programchi.ir/category/sqlite/">sqlite</a></li>
+		<li id="menu-item-58134" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-58134"><a href="https://programchi.ir/category/mysql/">mySql</a></li>
+		<li id="menu-item-58144" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-58144"><a href="https://programchi.ir/category/php/">php</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-60" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60"><a href="https://programchi.ir/%d8%b3%d9%88%d8%a7%d9%84-%d8%ac%d8%af%db%8c%d8%af/">سوال جدید</a></li>
+<li id="menu-item-133" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-133"><a href="http://programchi.ir/%D9%BE%D8%B3%D8%AA-%D8%AC%D8%AF%DB%8C%D8%AF">پست جدید</a></li>
+<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61"><a href="https://programchi.ir/%da%a9%d8%a7%d8%b1%d8%a8%d8%b1%d8%a7%d9%86/">کاربران</a></li>
+<li id="menu-item-59668" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59668"><a href="https://programchi.ir/%d8%a7%d8%b1%d8%aa%d8%a8%d8%a7%d8%b7-%d8%a8%d8%a7-%d9%85%d8%a7/">ارتباط با ما</a></li>
+<li id="menu-item-925" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-925"><a href="#">درباره ما</a></li>
+</ul></div>				</nav>
+				<nav class="navigation_mobile navigation_mobile_main">
+					<div class="navigation_mobile_click">منو</div>
+					<ul><li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-59"><a href="https://programchi.ir/">خانه</a></li><li id="menu-item-122" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-122 parent-list"><a href="https://programchi.ir/Education">آموزش <span class="menu-nav-arrow"><i class="icon-angle-down"></i></span></a>
+<ul class="sub-menu" style="display: none;">
+	<li id="menu-item-771" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-771 parent-list"><a href="https://programchi.ir/Education">برنامه نویسی <span class="menu-nav-arrow"><i class="icon-angle-down"></i></span></a>
+	<ul class="sub-menu" style="display: none;">
+		<li id="menu-item-772" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-772"><a href="https://programchi.ir/category/%d8%a7%d9%86%d8%af%d8%b1%d9%88%db%8c%d8%af/">اندروید</a></li>
+		<li id="menu-item-775" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-775"><a href="https://programchi.ir/category/%d8%b3%db%8c-%d8%b4%d8%a7%d8%b1%d9%be/">سی شارپ</a></li>
+		<li id="menu-item-773" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-773"><a href="https://programchi.ir/category/%d8%ac%d8%a7%d9%88%d8%a7/">جاوا</a></li>
+		<li id="menu-item-774" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-774"><a href="https://programchi.ir/category/%d8%ac%db%8c-%da%a9%d9%88%d8%a6%d8%b1%db%8c/">جی کوئری</a></li>
+		<li id="menu-item-57962" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-57962"><a href="https://programchi.ir/category/%da%a9%d8%a7%d8%b1%d8%a8%d8%b1%d8%af%db%8c/">کاربردی</a></li>
+		<li id="menu-item-59667" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59667"><a href="https://programchi.ir/category/material-design/">متریال دیزاین</a></li>
+		<li id="menu-item-60147" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-60147"><a href="https://programchi.ir/category/kotlin/">کوتلین</a></li>
+		<li id="menu-item-58121" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-58121"><a href="https://programchi.ir/category/sqlite/">sqlite</a></li>
+		<li id="menu-item-58134" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-58134"><a href="https://programchi.ir/category/mysql/">mySql</a></li>
+		<li id="menu-item-58144" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-58144"><a href="https://programchi.ir/category/php/">php</a></li>
+	</ul>
+</li>
+</ul>
+</li><li id="menu-item-60" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60"><a href="https://programchi.ir/%d8%b3%d9%88%d8%a7%d9%84-%d8%ac%d8%af%db%8c%d8%af/">سوال جدید</a></li><li id="menu-item-133" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-133"><a href="http://programchi.ir/%D9%BE%D8%B3%D8%AA-%D8%AC%D8%AF%DB%8C%D8%AF">پست جدید</a></li><li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61"><a href="https://programchi.ir/%da%a9%d8%a7%d8%b1%d8%a8%d8%b1%d8%a7%d9%86/">کاربران</a></li><li id="menu-item-59668" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59668"><a href="https://programchi.ir/%d8%a7%d8%b1%d8%aa%d8%a8%d8%a7%d8%b7-%d8%a8%d8%a7-%d9%85%d8%a7/">ارتباط با ما</a></li><li id="menu-item-925" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-925"><a href="#">درباره ما</a></li></ul>
+				</nav><!-- End navigation_mobile -->
+			</section><!-- End container -->
+		</header><!-- End header -->
+		
+		<div class="breadcrumbs"><section class="container"><div class="row"><div class="col-md-12"><h1>RESTful چیست ؟</h1><div class="clearfix"></div>
+        <div class="crumbs">
+        <a itemprop="breadcrumb" href="https://programchi.ir/"><span>خانه</span></a><span class="crumbs-span">/</span> <a href="https://programchi.ir/category/%da%a9%d8%a7%d8%b1%d8%a8%d8%b1%d8%af%db%8c/">کاربردی</a> <span class="crumbs-span">/</span> <span class="current">RESTful چیست ؟</span></div></div></div></section></div>		<!-- BLOW -->
+					<div class="section-warp ask-me big-search" style="">
+				<div class="container clearfix">
+					<div class="box_icon box_warp box_no_border box_no_background" style="">
+						<div class="row">
+							<div class="col-md-12">
+								<form class="form-style form-style-2" method="get" action="http://programchi.ir/">
+									<p>
+										<input value="جستجو..." onfocus="if(this.value=='جستجو...')this.value='';" onblur="if(this.value=='')this.value='جستجو...';" name="s" type="text">
+										<i class="icon-search"></i>
+										<button class="search-question"><span class="color button small publish-question" style="">جستجو</span></button>
+									</p>
+								</form>
+							</div>
+						</div><!-- End row -->
+					</div><!-- End box_icon -->
+				</div><!-- End container -->
+			</div>
+			
+		<section class="container main-content page-right-sidebar">
+						<div class="row">
+				<div class="with-sidebar-container">
+					<div class="col-md-9">
+					
+			<div><iframe src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/show.html" scrolling="no" style="background: #FFF url(//beta.kaprila.com/a/images/loading.gif) no-repeat center; width: 845px; height: 550px; max-width: 100%;" frameborder="0"></iframe></div>
+
+		<article class="post single-post post-63027 type-post status-publish format-standard has-post-thumbnail hentry category-942 category-php tag-api tag-rest tag-api- tag-rest-api tag-restful tag-api-- tag-restful-api-- tag-restful- tag-restful-api tag-restful-api- tag-restful-- tag-web-api tag-13778 tag-13779 tag-13780 tag-13781 tag-restful----- tag-restful--- tag-api-rest tag-restful-api-in-programming tag-what-is-restful-api" id="post-63027" role="article" itemscope="" itemtype="http://schema.org/Article">
+			<div class="post-inner">
+				<div class="post-img post-img-9">
+					<img alt="RESTful چیست ؟" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/scientific-what-is-restful-api-min-810x450.png" width="810" height="450">				</div>
+	        	<h2 itemprop="name" class="post-title">
+	        			        		    	<span class="post-type"><i class="icon-picture"></i></span>
+	        			RESTful چیست ؟	        	</h2>
+									<div class="post-meta">
+					    <span class="meta-author" itemprop="author" rel="author"><i class="icon-user"></i>
+						    <a href="https://programchi.ir/author/admin/" title="ارسال شده توسط: محمد حسین جعفری پور" rel="author">محمد حسین جعفری پور</a>					    </span>
+					    					    <span class="meta-date" datetime="۱۳۹۷-۶-۲ ۰۴:۵۴:۲۴ +۰۰:۰۰" itemprop="datePublished"><i class="icon-time"></i>شهریور ۲ , ۱۳۹۷</span>
+					    <span class="meta-categories"><i class="icon-suitcase"></i><a href="https://programchi.ir/category/%da%a9%d8%a7%d8%b1%d8%a8%d8%b1%d8%af%db%8c/" rel="category tag">کاربردی</a> , <a href="https://programchi.ir/category/php/" rel="category tag">php</a></span>
+					    <span class="meta-comment"><i class="icon-comments-alt"></i><a href="https://programchi.ir/2018/08/24/restful-%da%86%db%8c%d8%b3%d8%aa-%d8%9f/#respond">۰ نظر</a></span>
+					    <meta itemprop="interactionCount" content="UserComments: 0">
+					    <span class="post-view"><i class="icon-eye-open"></i>78 نمایش</span>
+					</div>
+								<div class="post-content" itemprop="mainContentOfPage">
+					<p>سلام توسعه دهندگان گرامی در این مقاله به بررسی&nbsp;RESTful چیست ؟ می پردازیم&nbsp;&nbsp;<strong>RESTful</strong>&nbsp;(یا
+ REST مخفف Representational state transfer) یک سبک معماری است که پاسخ 
+گوی درخواست هایی که از سمت سرور ارسال می شود است rest را شاید در نام های
+ مختلفی دیده باشید مثل&nbsp;RESTful APIs , REST در ادامه&nbsp;RESTful را
+ کمی بیشتر باز کرده و اطلاعاتی بیشتر از&nbsp;RESTful می توانید کسب کنید 
+با ما همراه باشید.</p>
+<p>&nbsp;</p>
+<h3>تاریخچه RESTful</h3>
+<p>REST مخفف واژگان Representational State Transfer است که از سال ۲۰۰۵ 
+در وب شناخته شد که در ظاهر کمی گیج‌کننده به نظر می رسد، اما با کمی 
+توضیح، می‌توان این مفهوم در ظاهر پیچیده را رمزگشایی کرد!</p>
+<p>&nbsp;</p>
+<h3>RESTful چیست ؟</h3>
+<p><strong>RESTful</strong>&nbsp;(یا REST مخفف Representational state 
+transfer) یک سبک معماری است که پاسخ گوی درخواست هایی که از سمت سرور 
+ارسال می شود است این درخواست ها می توانند کارهای مختلفی بکنند مثل حذف 
+داده , درج داده , دریافت داده و ارسال داده (GET requests. PUT, POST, 
+DELETE)</p>
+<p>هر RESTful از دو بخش تشکیل می شود Client و Server کلایت که همان 
+کاربری است که درخواست می کند و Server همان RESTful ماست که به این 
+درخواست پاسخ میدهد در واقع بدون اینکه کاربر متوجه شود با سمت سرور ارتباط
+ برقرار کرده است و تنها داده هایی که از سمت سرور برگشت داده شده اند را 
+مشاهده می کند.</p>
+<p>در واقع یک&nbsp;<strong>RESTful&nbsp;</strong>بیان کننده یک آدرس از یک محصول خاص است مثل</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5b8d607604fbc711632138" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important; height: 18px !important; line-height: 18px !important; margin-top: -18px; display: none; z-index: 4;"><span class="crayon-title">url</span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button crayon-pressed" title="تغییر وضعیت شماره خطوط"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="نمایش ساده/هایلایت کد"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="تغییر وضعیت اسکرول افقی"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="گسترش کد" style="display: none;"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="کپی کردن"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="نمایش در یک پنجره جدید"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="-moz-tab-size: 4; font-size: 12px !important; line-height: 15px !important; z-index: 0; opacity: 0; overflow: hidden;" wrap="soft">http://myserver.com/catalog/item/1729</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5b8d607604fbc711632138-1">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5b8d607604fbc711632138-1"><span class="crayon-v">http</span><span class="crayon-o">:</span><span class="crayon-c">//myserver.com/catalog/item/1729</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0003 seconds] -->
+<p>اما معماری RESTful همیشه باید یک پارامتر ورودی داشته باشد یه همچین url که در زیر مقدار ۱۷۲۹ توسط REST ما دریافت شده است.</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5b8d607604fc2993024642" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important; height: 18px !important; line-height: 18px !important; margin-top: -18px; display: none; z-index: 4;"><span class="crayon-title">Url</span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button crayon-pressed" title="تغییر وضعیت شماره خطوط"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="نمایش ساده/هایلایت کد"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="تغییر وضعیت اسکرول افقی"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="گسترش کد" style="display: none;"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="کپی کردن"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="نمایش در یک پنجره جدید"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="-moz-tab-size: 4; font-size: 12px !important; line-height: 15px !important; z-index: 0; opacity: 0; overflow: hidden;" wrap="soft">http://myserver.com/catalog?item=1729</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5b8d607604fc2993024642-1">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5b8d607604fc2993024642-1"><span class="crayon-v">http</span><span class="crayon-o">:</span><span class="crayon-c">//myserver.com/catalog?item=1729</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0001 seconds] -->
+<p>در واقع اگر درخواست کننده را گوشی موبایل یا کاربر در نظر بگیریم در 
+ازاری ارسال یک مقدار یکسری داده دیگر دریافت می کند مثلا با ارسال عدد ۱ 
+به سمت سرور اولین محصول سایت را دریافت می کند.</p>
+<p>به عنوان مثال دیگر درخواست به شکل زیر توسط کاربر ارسال می شود که حاوی نام و شهر اوست</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5b8d607604fc4281304029" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important; height: 18px !important; line-height: 18px !important; margin-top: -18px; display: none; position: absolute; z-index: 2;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button crayon-pressed" title="تغییر وضعیت شماره خطوط"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="نمایش ساده/هایلایت کد"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="تغییر وضعیت اسکرول افقی"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="گسترش کد" style="display: none;"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="کپی کردن"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="نمایش در یک پنجره جدید"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="-moz-tab-size: 4; font-size: 12px !important; line-height: 15px !important; z-index: 0; opacity: 0; overflow: hidden;" wrap="soft">POST /user
+Accept: application/json+userdb
+Content-Type: application/json+userdb
+
+{
+    "name": "Karl",
+    "country": "Austria"
+}</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5b8d607604fc4281304029-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b8d607604fc4281304029-2">2</div><div class="crayon-num" data-line="crayon-5b8d607604fc4281304029-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b8d607604fc4281304029-4">4</div><div class="crayon-num" data-line="crayon-5b8d607604fc4281304029-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b8d607604fc4281304029-6">6</div><div class="crayon-num" data-line="crayon-5b8d607604fc4281304029-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b8d607604fc4281304029-8">8</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5b8d607604fc4281304029-1"><span class="crayon-v">POST</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-e">user</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b8d607604fc4281304029-2"><span class="crayon-v">Accept</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-v">application</span><span class="crayon-o">/</span><span class="crayon-v">json</span><span class="crayon-o">+</span><span class="crayon-e">userdb</span></div><div class="crayon-line" id="crayon-5b8d607604fc4281304029-3"><span class="crayon-v">Content</span><span class="crayon-o">-</span><span class="crayon-v">Type</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-e">application</span><span class="crayon-o">/</span><span class="crayon-e">json</span><span class="crayon-o">+</span><span class="crayon-e">userdb</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b8d607604fc4281304029-4">&nbsp;</div><div class="crayon-line" id="crayon-5b8d607604fc4281304029-5"><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b8d607604fc4281304029-6"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"name"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"Karl"</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-5b8d607604fc4281304029-7"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"country"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"Austria"</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b8d607604fc4281304029-8"><span class="crayon-sy">}</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0004 seconds] -->
+<p>و در نهایت خروجی به شکل زیر (فرمت Json) برگشت داده می شود.</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5b8d607604fc6526940110" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important; height: 18px !important; line-height: 18px !important; margin-top: -18px; display: none; position: absolute; z-index: 2;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button crayon-pressed" title="تغییر وضعیت شماره خطوط"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="نمایش ساده/هایلایت کد"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="تغییر وضعیت اسکرول افقی"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="گسترش کد" style="display: none;"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="کپی کردن"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="نمایش در یک پنجره جدید"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="-moz-tab-size: 4; font-size: 12px !important; line-height: 15px !important; z-index: 0; opacity: 0; overflow: hidden;" wrap="soft">201 Created
+Content-Type: application/json+userdb
+
+{
+    "user": {
+        "id": 3,
+        "name": "Karl",
+        "country": "Austria",
+        "links": [
+            {
+                "href": "/user/3",
+                "rel": "self",
+                "method": "GET"
+            },
+            {
+                "href": "/user/3",
+                "rel": "edit",
+                "method": "PUT"
+            },
+            {
+                "href": "/user/3",
+                "rel": "delete",
+                "method": "DELETE"
+            }
+        ]
+    },
+    "links": {
+       "href": "/user",
+       "rel": "list",
+       "method": "GET"
+    }
+}</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5b8d607604fc6526940110-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b8d607604fc6526940110-2">2</div><div class="crayon-num" data-line="crayon-5b8d607604fc6526940110-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b8d607604fc6526940110-4">4</div><div class="crayon-num" data-line="crayon-5b8d607604fc6526940110-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b8d607604fc6526940110-6">6</div><div class="crayon-num" data-line="crayon-5b8d607604fc6526940110-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b8d607604fc6526940110-8">8</div><div class="crayon-num" data-line="crayon-5b8d607604fc6526940110-9">9</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b8d607604fc6526940110-10">10</div><div class="crayon-num" data-line="crayon-5b8d607604fc6526940110-11">11</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b8d607604fc6526940110-12">12</div><div class="crayon-num" data-line="crayon-5b8d607604fc6526940110-13">13</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b8d607604fc6526940110-14">14</div><div class="crayon-num" data-line="crayon-5b8d607604fc6526940110-15">15</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b8d607604fc6526940110-16">16</div><div class="crayon-num" data-line="crayon-5b8d607604fc6526940110-17">17</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b8d607604fc6526940110-18">18</div><div class="crayon-num" data-line="crayon-5b8d607604fc6526940110-19">19</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b8d607604fc6526940110-20">20</div><div class="crayon-num" data-line="crayon-5b8d607604fc6526940110-21">21</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b8d607604fc6526940110-22">22</div><div class="crayon-num" data-line="crayon-5b8d607604fc6526940110-23">23</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b8d607604fc6526940110-24">24</div><div class="crayon-num" data-line="crayon-5b8d607604fc6526940110-25">25</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b8d607604fc6526940110-26">26</div><div class="crayon-num" data-line="crayon-5b8d607604fc6526940110-27">27</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b8d607604fc6526940110-28">28</div><div class="crayon-num" data-line="crayon-5b8d607604fc6526940110-29">29</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b8d607604fc6526940110-30">30</div><div class="crayon-num" data-line="crayon-5b8d607604fc6526940110-31">31</div><div class="crayon-num crayon-striped-num" data-line="crayon-5b8d607604fc6526940110-32">32</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5b8d607604fc6526940110-1"><span class="crayon-cn">201</span><span class="crayon-h"> </span><span class="crayon-e">Created</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b8d607604fc6526940110-2"><span class="crayon-v">Content</span><span class="crayon-o">-</span><span class="crayon-v">Type</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-e">application</span><span class="crayon-o">/</span><span class="crayon-e">json</span><span class="crayon-o">+</span><span class="crayon-e">userdb</span></div><div class="crayon-line" id="crayon-5b8d607604fc6526940110-3">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5b8d607604fc6526940110-4"><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-5b8d607604fc6526940110-5"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"user"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b8d607604fc6526940110-6"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"id"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">3</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-5b8d607604fc6526940110-7"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"name"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"Karl"</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b8d607604fc6526940110-8"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"country"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"Austria"</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-5b8d607604fc6526940110-9"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"links"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-sy">[</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b8d607604fc6526940110-10"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-5b8d607604fc6526940110-11"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"href"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"/user/3"</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b8d607604fc6526940110-12"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"rel"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"self"</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-5b8d607604fc6526940110-13"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"method"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"GET"</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b8d607604fc6526940110-14"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-5b8d607604fc6526940110-15"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b8d607604fc6526940110-16"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"href"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"/user/3"</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-5b8d607604fc6526940110-17"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"rel"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"edit"</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b8d607604fc6526940110-18"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"method"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"PUT"</span></div><div class="crayon-line" id="crayon-5b8d607604fc6526940110-19"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b8d607604fc6526940110-20"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-5b8d607604fc6526940110-21"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"href"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"/user/3"</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b8d607604fc6526940110-22"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"rel"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"delete"</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-5b8d607604fc6526940110-23"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"method"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"DELETE"</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b8d607604fc6526940110-24"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span></div><div class="crayon-line" id="crayon-5b8d607604fc6526940110-25"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">]</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b8d607604fc6526940110-26"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-5b8d607604fc6526940110-27"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"links"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b8d607604fc6526940110-28"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-s">"href"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"/user"</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-5b8d607604fc6526940110-29"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-s">"rel"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"list"</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b8d607604fc6526940110-30"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-s">"method"</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"GET"</span></div><div class="crayon-line" id="crayon-5b8d607604fc6526940110-31"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span></div><div class="crayon-line crayon-striped-line" id="crayon-5b8d607604fc6526940110-32"><span class="crayon-sy">}</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0015 seconds] -->
+<p>که حاوی اطلاعات کاربری است.</p>
+<p>عکس زیر شاید کمی موضوع را بیشتر واضح کند.</p>
+<p><img class="aligncenter size-full wp-image-63030" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/rest-api-min.jpg" alt="" srcset="https://programchi.ir/wp-content/uploads/2018/08/rest-api-min.jpg 413w, https://programchi.ir/wp-content/uploads/2018/08/rest-api-min-300x186.jpg 300w" sizes="(max-width: 413px) 100vw, 413px" width="413" height="256"></p>
+<h3>API چیست ؟</h3>
+<p>API هم مخفف واژگان Application Programming Interface است که 
+دربرگیرنده ی متدهایی برای ارتباط با سایر لایبرری ها یا اپلیکیشن ها است.</p>
+<h3>RESTful API چیست ؟</h3>
+<p>حال اگر این اصطلاحات در کنار یکدیگر قرار دهیم و چیزی&nbsp;تحت عنوان 
+RESTful API بسازیم، منظورمان ساز و کارهایی برای ارتباط با سایر سرویس ها 
+با استفاده از معماری خاصی است.</p>
+<h3>شرایط لازم برای ایحاد REST یا RESTful API یا RESTful</h3>
+<ul>
+<li>سمت سرور وجود داشته باشد (جایی باشد که امکان انجام عملیات مختلف وجود داشته باشد.)</li>
+<li>قابلیت&nbsp;cache در سمت سرور وجود داشته باشد (تا در امکان مدیریت منابع سمت سرور کمی راحت تر شود)</li>
+<li>امن باشد.</li>
+</ul>
+<p>در کل از&nbsp;<strong>چهار دستور</strong>&nbsp;برای&nbsp;<strong>دسترسی به RESTful API</strong>&nbsp;&nbsp;استفاده می شود :</p>
+<ol>
+<li><code>GET</code>&nbsp;برای گرفتن یک شی</li>
+<li><code>POST</code>&nbsp;برای ایجاد یک شی</li>
+<li><code>PUT</code>&nbsp;برای ویرایش یا بازنویسی یک شی</li>
+<li><code>DELETE</code>&nbsp;برای حذف یک شی</li>
+</ol>
+<h3>جمع بندی و نگاهی ساده به RESTful</h3>
+<p>اگر خیلی ساده بخواهیم به این قضیه نگاه کنیم، REST عبارت است از راه 
+کارها و روش‌هایی که با استفاده از آن‌ها می‌توان به رد و بدل دیتا از طریق
+ شبکه پرداخت. به عبارت دیگر، REST راهی ساده به منظور سازماندهی تعاملات 
+مابین سیستم‌های مجزا از یکدیگر می باشد.</p>
+<p>&nbsp;</p>
+<p>این مقاله هم به پایان رسید.</p>
+<p>موفق و پیروز باشید.</p>
+				</div>
+				
+								<div class="clearfix"></div>
+				
+			</div><!-- End post-inner -->
+		</article><!-- End article.post -->
+		
+					<div class="share-tags page-content">
+									<div class="post-tags"><i class="icon-tags"></i>
+						<a href="https://programchi.ir/tag/api/" rel="tag">api</a> , <a href="https://programchi.ir/tag/rest/" rel="tag">rest</a> , <a href="https://programchi.ir/tag/api-%da%86%db%8c%d8%b3%d8%aa/" rel="tag">Api چیست</a> , <a href="https://programchi.ir/tag/rest-api/" rel="tag">REST API</a> , <a href="https://programchi.ir/tag/restful/" rel="tag">restful</a> , <a href="https://programchi.ir/tag/api-%da%86%db%8c%d8%b3%d8%aa-%d8%9f/" rel="tag">API چیست ؟</a> , <a href="https://programchi.ir/tag/restful-api-%da%86%db%8c%d8%b3%d8%aa-%d8%9f/" rel="tag">RESTful API چیست ؟</a> , <a href="https://programchi.ir/tag/restful-%da%86%db%8c%d8%b3%d8%aa/" rel="tag">restful چیست</a> , <a href="https://programchi.ir/tag/restful-api/" rel="tag">restful api</a> , <a href="https://programchi.ir/tag/restful-api-%da%86%db%8c%d8%b3%d8%aa/" rel="tag">restful api چیست</a> , <a href="https://programchi.ir/tag/restful-%da%86%db%8c%d8%b3%d8%aa-%d8%9f/" rel="tag">RESTful چیست ؟</a> , <a href="https://programchi.ir/tag/web-api/" rel="tag">web api</a> , <a href="https://programchi.ir/tag/%d8%b1%d8%b3%d8%aa%d9%81%d9%88%d9%84-%da%86%db%8c%d8%b3%d8%aa-%d8%9f/" rel="tag">رستفول چیست ؟</a> , <a href="https://programchi.ir/tag/%d8%b1%d8%b3%d8%aa-%d9%81%d9%88%d9%84-%da%86%db%8c%d8%b3%d8%aa-%d8%9f/" rel="tag">رست فول چیست ؟</a> , <a href="https://programchi.ir/tag/%d8%b1%d8%b3%d8%aa-%d9%81%d9%88%d8%a7-%d8%a7%db%8c-%d9%be%db%8c-%d8%a7%db%8c/" rel="tag">رست فوا ای پی ای</a> , <a href="https://programchi.ir/tag/%d8%b1%d8%b3%d8%aa-%d9%81%d9%88%d8%a7-%d8%a7%db%8c-%d9%be%db%8c-%d8%a7%db%8c-%da%86%db%8c%d8%b3%d8%aa/" rel="tag">رست فوا ای پی ای چیست</a> , <a href="https://programchi.ir/tag/restful-%d8%a7%db%8c-%d9%be%db%8c-%d8%a7%db%8c-%da%86%db%8c%d8%b3%d8%aa-%d8%9f/" rel="tag">restful ای پی ای چیست ؟</a> , <a href="https://programchi.ir/tag/restful-%d8%a7%db%8c-%d9%be%db%8c-%d8%a7%db%8c/" rel="tag">restful ای پی ای</a> , <a href="https://programchi.ir/tag/api-rest/" rel="tag">api rest</a> , <a href="https://programchi.ir/tag/restful-api-in-programming/" rel="tag">restful api in programming</a> , <a href="https://programchi.ir/tag/what-is-restful-api/" rel="tag">what is restful api</a>					</div>
+									<div class="share-inside-warp">
+						<ul>
+							<li>
+								<a href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fprogramchi.ir%2F2018%2F08%2F24%2Frestful-%25da%2586%25db%258c%25d8%25b3%25d8%25aa-%25d8%259f%2F" target="_blank">
+									<span class="icon_i">
+										<span class="icon_square" icon_size="20" span_bg="#3b5997" span_hover="#666" style="height: 20px; width: 20px; font-size: 10px; line-height: 20px; background-color: rgb(59, 89, 151); border-style: solid;">
+											<i i_color="#FFF" class="social_icon-facebook" style="color: rgb(255, 255, 255);"></i>
+										</span>
+									</span>
+								</a>
+								<a href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fprogramchi.ir%2F2018%2F08%2F24%2Frestful-%25da%2586%25db%258c%25d8%25b3%25d8%25aa-%25d8%259f%2F" target="_blank">فیسبوک</a>
+							</li>
+							<li>
+								<a href="http://twitter.com/home?status=https%3A%2F%2Fprogramchi.ir%2F2018%2F08%2F24%2Frestful-%25da%2586%25db%258c%25d8%25b3%25d8%25aa-%25d8%259f%2F" target="_blank">
+									<span class="icon_i">
+										<span class="icon_square" icon_size="20" span_bg="#00baf0" span_hover="#666" style="height: 20px; width: 20px; font-size: 10px; line-height: 20px; background-color: rgb(0, 186, 240); border-style: solid;">
+											<i i_color="#FFF" class="social_icon-twitter" style="color: rgb(255, 255, 255);"></i>
+										</span>
+									</span>
+								</a>
+								<a target="_blank" href="http://twitter.com/home?status=https%3A%2F%2Fprogramchi.ir%2F2018%2F08%2F24%2Frestful-%25da%2586%25db%258c%25d8%25b3%25d8%25aa-%25d8%259f%2F">تویتر</a>
+							</li>
+							<li>
+								<a href="http://plus.google.com/share?url=https%3A%2F%2Fprogramchi.ir%2F2018%2F08%2F24%2Frestful-%25da%2586%25db%258c%25d8%25b3%25d8%25aa-%25d8%259f%2F" target="_blank">
+									<span class="icon_i">
+										<span class="icon_square" icon_size="20" span_bg="#ca2c24" span_hover="#666" style="height: 20px; width: 20px; font-size: 10px; line-height: 20px; background-color: rgb(202, 44, 36); border-style: solid;">
+											<i i_color="#FFF" class="social_icon-gplus" style="color: rgb(255, 255, 255);"></i>
+										</span>
+									</span>
+								</a>
+								<a href="http://plus.google.com/share?url=https%3A%2F%2Fprogramchi.ir%2F2018%2F08%2F24%2Frestful-%25da%2586%25db%258c%25d8%25b3%25d8%25aa-%25d8%259f%2F" target="_blank">گوگل +</a>
+							</li>
+							<li>
+								<a href="http://www.tumblr.com/share/link?url=https%3A%2F%2Fprogramchi.ir%2F2018%2F08%2F24%2Frestful-%25da%2586%25db%258c%25d8%25b3%25d8%25aa-%25d8%259f%2F&amp;name=RESTful+%DA%86%DB%8C%D8%B3%D8%AA+%D8%9F" target="_blank">
+									<span class="icon_i">
+										<span class="icon_square" icon_size="20" span_bg="#44546b" span_hover="#666" style="height: 20px; width: 20px; font-size: 10px; line-height: 20px; background-color: rgb(68, 84, 107); border-style: solid;">
+											<i i_color="#FFF" class="social_icon-tumblr" style="color: rgb(255, 255, 255);"></i>
+										</span>
+									</span>
+								</a>
+								<a href="http://www.tumblr.com/share/link?url=https%3A%2F%2Fprogramchi.ir%2F2018%2F08%2F24%2Frestful-%25da%2586%25db%258c%25d8%25b3%25d8%25aa-%25d8%259f%2F&amp;name=RESTful+%DA%86%DB%8C%D8%B3%D8%AA+%D8%9F" target="_blank">تامبلر</a>
+							</li>
+							<li>
+								<a target="_blank" href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fprogramchi.ir%2F2018%2F08%2F24%2Frestful-%25da%2586%25db%258c%25d8%25b3%25d8%25aa-%25d8%259f%2F&amp;media=https%3A%2F%2Fprogramchi.ir%2Fwp-content%2Fuploads%2F2018%2F08%2Fscientific-what-is-restful-api-min.png">
+									<span class="icon_i">
+										<span class="icon_square" icon_size="20" span_bg="#c7151a" span_hover="#666" style="height: 20px; width: 20px; font-size: 10px; line-height: 20px; background-color: rgb(199, 21, 26); border-style: solid;">
+											<i i_color="#FFF" class="icon-pinterest" style="color: rgb(255, 255, 255);"></i>
+										</span>
+									</span>
+								</a>
+								<a href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fprogramchi.ir%2F2018%2F08%2F24%2Frestful-%25da%2586%25db%258c%25d8%25b3%25d8%25aa-%25d8%259f%2F&amp;media=https%3A%2F%2Fprogramchi.ir%2Fwp-content%2Fuploads%2F2018%2F08%2Fscientific-what-is-restful-api-min.png" target="_blank">پینترست</a>
+							</li>
+							<li>
+								<a target="_blank" onclick="popup = window.open('mailto:?subject=RESTful چیست ؟&amp;body=https://programchi.ir/2018/08/24/restful-%da%86%db%8c%d8%b3%d8%aa-%d8%9f/', 'PopupPage', 'height=450,width=500,scrollbars=yes,resizable=yes'); return false" href="#">
+									<span class="icon_i">
+										<span class="icon_square" icon_size="20" span_bg="#000" span_hover="#666" style="height: 20px; width: 20px; font-size: 10px; line-height: 20px; background-color: rgb(0, 0, 0); border-style: solid;">
+											<i i_color="#FFF" class="social_icon-email" style="color: rgb(255, 255, 255);"></i>
+										</span>
+									</span>
+								</a>
+								<a target="_blank" onclick="popup = window.open('mailto:?subject=RESTful چیست ؟&amp;body=https://programchi.ir/2018/08/24/restful-%da%86%db%8c%d8%b3%d8%aa-%d8%9f/', 'PopupPage', 'height=450,width=500,scrollbars=yes,resizable=yes'); return false" href="#">Email</a>
+							</li>
+						</ul>
+						<span class="share-inside-f-arrow"></span>
+						<span class="share-inside-l-arrow"></span>
+					</div><!-- End share-inside-warp -->
+					<div class="share-inside"><i class="icon-share-alt"></i>اشتراک گذاری</div>
+								<div class="clearfix"></div>
+			</div><!-- End share-tags -->
+		<div class="clearfix"></div>
+					<div class="advertising"><iframe src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/show_002.html" scrolling="no" style="background: #FFF url(//beta.kaprila.com/a/images/loading.gif) no-repeat center; width: 845px; height: 480px; max-width: 100%;" frameborder="0"></iframe></div><!-- End advertising -->
+					<div class="clearfix"></div>						<div class="about-author clearfix">
+							<div class="author-image">
+								<a href="https://programchi.ir/author/admin/" original-title="محمد حسین جعفری پور" class="tooltip-n">
+									<img alt="محمد حسین جعفری پور" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/photo_2018-06-24_01-56-50-65x65.jpg">								</a>
+							</div>
+						    <div class="author-bio">
+						        <h4>
+							        درباره نویسنده						        </h4>
+						        با زبان های برنامه نویسی C# , Java , Php به صورت تخصصی کار
+ کردم و بیشتر وقتم رو در برنامه نویسی می گذرونم علاقه زیادی به ساخت 
+اپلیکیشن اندروید دارم.						    </div>
+						</div><!-- End about-author -->
+					<div id="comments"></div>	
+	<div id="respond" class="comment-respond page-content clearfix no_comment_box">
+	    <div class="boxedtitle page-title"><h2>نظر دهید</h2></div>
+	    		    <form action="https://programchi.ir/wp-comments-post.php" method="post" id="commentform">
+		    	<div class="ask_error"></div>
+		        			        <div id="respond-inputs" class="clearfix">
+			            <p>
+			                <label class="required" for="comment_name">نام<span>*</span></label>
+			                <input name="author" id="comment_name" aria-required="true" type="text">
+			            </p>
+			            <p>
+			                <label class="required" for="comment_email">ایمیل<span>*</span></label>
+			                <input name="email" id="comment_email" aria-required="true" type="text">
+			            </p>
+			            <p class="last">
+			                <label class="required" for="comment_url">وب سایت</label>
+			                <input name="url" id="comment_url" type="text">
+			            </p>
+			        </div>
+		        		        <div class="clearfix">
+		        			        </div>
+		        <div id="respond-textarea">
+		            <p>
+		                <label class="required" for="comment">نظر<span>*</span></label>
+		                		                	<textarea id="comment" name="comment" aria-required="true" cols="58" rows="10"></textarea>
+		                		            </p>
+		            <p class="form-allowed-tags"></p>		        </div>
+	        	<div class="cancel-comment-reply"><a rel="nofollow" id="cancel-comment-reply-link" href="https://programchi.ir/2018/08/24/restful-%da%86%db%8c%d8%b3%d8%aa-%d8%9f/#respond" style="display:none;">برای صرف‌نظر کردن از پاسخ‌گویی اینجا را کلیک کنید.</a></div>
+		        <p class="form-submit">
+		        	<input name="submit" id="submit" value="ارسال نظر" class="button small color" style="" type="submit">
+		        	<input name="comment_post_ID" value="63027" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+		        	</p><p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="88d4673768" type="hidden"></p><p style="display: none;"></p>		        <p></p>
+		    <input id="ak_js" name="ak_js" value="1535991924945" type="hidden"></form>
+			</div>
+						<div id="related-posts">
+							<h2>پست های مرتبط</h2>
+							<ul class="related-posts">
+																	<li class="related-item"><h3><a href="https://programchi.ir/2018/08/27/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-%d8%af%db%8c%d8%aa%d8%a7%d8%a8%db%8c%d8%b3-room-%d8%af%d8%b1-%d8%a7%d9%86%d8%af%d8%b1%d9%88%db%8c%d8%af/" title="آموزش دیتابیس Room در اندروید"><i class="icon-double-angle-right"></i>آموزش دیتابیس Room در اندروید</a></h3></li>
+																	<li class="related-item"><h3><a href="https://programchi.ir/2018/08/27/intent-filter-%da%86%db%8c%d8%b3%d8%aa-%d8%9f/" title="Intent Filter چیست ؟"><i class="icon-double-angle-right"></i>Intent Filter چیست ؟</a></h3></li>
+																	<li class="related-item"><h3><a href="https://programchi.ir/2018/08/25/%d8%af%db%8c%d8%aa%d8%a7%d8%a8%db%8c%d8%b3-room-%da%86%db%8c%d8%b3%d8%aa-%d8%9f/" title="دیتابیس Room چیست ؟"><i class="icon-double-angle-right"></i>دیتابیس Room چیست ؟</a></h3></li>
+																	<li class="related-item"><h3><a href="https://programchi.ir/2018/08/25/orm-%da%86%db%8c%d8%b3%d8%aa-%d8%9f/" title="ORM چیست ؟"><i class="icon-double-angle-right"></i>ORM چیست ؟</a></h3></li>
+																	<li class="related-item"><h3><a href="https://programchi.ir/2018/08/25/%d9%85%d9%82%d8%a7%db%8c%d8%b3%d9%87-recyclerview-%d9%88-listview/" title="مقایسه RecyclerView و ListView"><i class="icon-double-angle-right"></i>مقایسه RecyclerView و ListView</a></h3></li>
+															</ul>
+						</div><!-- End related-posts -->
+										<div class="post-next-prev clearfix">
+					    <p class="prev-post">
+					        <a href="https://programchi.ir/2018/08/24/listview-%da%86%db%8c%d8%b3%d8%aa-%d8%9f/" rel="prev"><i class="icon-double-angle-left"></i>&nbsp;پست قبلی</a>					    </p>
+					    <p class="next-post">
+					    	<a href="https://programchi.ir/2018/08/25/%d9%85%d9%82%d8%a7%db%8c%d8%b3%d9%87-recyclerview-%d9%88-listview/" rel="next">پست بعدی&nbsp;<i class="icon-double-angle-right"></i></a>					    </p>
+					</div><!-- End post-next-prev -->
+								
+				</div><!-- End main -->
+									<aside class="col-md-3 sidebar sticky-sidebar">
+						<div id="tabs-widget-3" class="widget tabs-widget"><div class="widget_tabs tabs-warp">				<ul class="tabs">
+										<li class="tab"><a href="#" class="current">محبوب ها</a></li>
+										<li class="tab"><a href="#">اخیرا</a></li>
+										<li class="tab"><a href="#">نظرات</a></li>
+									</ul>
+				<div class="tab-inner-warp" style="display: block;"><div class="tab-inner"><ul class="related-posts">				<li class="related-item">
+											<div class="author-img">
+							<a href="https://programchi.ir/2017/07/29/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-date-picker-%d9%81%d8%a7%d8%b1%d8%b3%db%8c-%d8%af%d8%b1-%d8%a8%d8%b1%d9%86%d8%a7%d9%85%d9%87-%d9%86%d9%88%db%8c%d8%b3%db%8c-%d8%a7%d9%86%d8%af%d8%b1%d9%88%db%8c%d8%af/" title="آموزش Date Picker فارسی در برنامه نویسی اندروید" rel="bookmark">
+								<img alt="آموزش Date Picker فارسی در برنامه نویسی اندروید" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/ps-min-60x60.png" width="60" height="60">							</a>
+						</div>
+										<div class="questions-div">
+						<h3>
+							<a href="https://programchi.ir/2017/07/29/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-date-picker-%d9%81%d8%a7%d8%b1%d8%b3%db%8c-%d8%af%d8%b1-%d8%a8%d8%b1%d9%86%d8%a7%d9%85%d9%87-%d9%86%d9%88%db%8c%d8%b3%db%8c-%d8%a7%d9%86%d8%af%d8%b1%d9%88%db%8c%d8%af/" title="آموزش Date Picker فارسی در برنامه نویسی اندروید" rel="bookmark">
+								آموزش Date Picker فارسی در 							</a>
+						</h3>
+													<p>سلام دوستان در این سری از آموزش برنامه نویسی اندروید به&nbsp;آموزش Date Picker فارسی در برنامه نویسی اندروید می پردازیم ...</p>
+													<div class="clear"></div><span>مرداد ۷ , ۱۳۹۶</span>
+											</div>
+				</li>
+							<li class="related-item">
+											<div class="author-img">
+							<a href="https://programchi.ir/2017/08/30/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-%d9%82%d8%b1%d8%a7%d8%b1-%d8%af%d8%a7%d8%af%d9%86-%d8%a7%d9%be%d9%84%db%8c%da%a9%db%8c%d8%b4%d9%86-%d8%af%d8%b1-google-play/" title="آموزش قرار دادن اپلیکیشن در Google Play" rel="bookmark">
+								<img alt="آموزش قرار دادن اپلیکیشن در Google Play" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/Developer-min-60x60.png" width="60" height="60">							</a>
+						</div>
+										<div class="questions-div">
+						<h3>
+							<a href="https://programchi.ir/2017/08/30/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-%d9%82%d8%b1%d8%a7%d8%b1-%d8%af%d8%a7%d8%af%d9%86-%d8%a7%d9%be%d9%84%db%8c%da%a9%db%8c%d8%b4%d9%86-%d8%af%d8%b1-google-play/" title="آموزش قرار دادن اپلیکیشن در Google Play" rel="bookmark">
+								آموزش قرار دادن اپلیکیشن در 							</a>
+						</h3>
+													<p>سلام دوستان شاید شما هم دوست داشته باشید اپلیکیشن خود را در&nbsp;Google Play منتشر کنید در امروز به&nbsp;آموزش قرار دادن ...</p>
+													<div class="clear"></div><span>شهریور ۸ , ۱۳۹۶</span>
+											</div>
+				</li>
+							<li class="related-item">
+											<div class="author-img">
+							<a href="https://programchi.ir/2017/05/17/%d9%86%d8%ad%d9%88%d9%87-%d8%a7%d8%b1%d8%b3%d8%a7%d9%84-push-notification-%d8%a7%d8%b2-%d8%b7%d8%b1%db%8c%d9%82-%d8%b3%d8%b1%d9%88%db%8c%d8%b3-firebase-%db%8c%d8%a7-fcm/" title="نحوه ارسال push notification از طریق سرویس Firebase یا fcm" rel="bookmark">
+								<img alt="نحوه ارسال push notification از طریق سرویس Firebase یا fcm" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/Untitled-2-60x60.png" width="60" height="60">							</a>
+						</div>
+										<div class="questions-div">
+						<h3>
+							<a href="https://programchi.ir/2017/05/17/%d9%86%d8%ad%d9%88%d9%87-%d8%a7%d8%b1%d8%b3%d8%a7%d9%84-push-notification-%d8%a7%d8%b2-%d8%b7%d8%b1%db%8c%d9%82-%d8%b3%d8%b1%d9%88%db%8c%d8%b3-firebase-%db%8c%d8%a7-fcm/" title="نحوه ارسال push notification از طریق سرویس Firebase یا fcm" rel="bookmark">
+								نحوه ارسال push notification از 							</a>
+						</h3>
+													<p>سلام دوستان قبلا ما آموزش&nbsp;ارسال Push ...</p>
+													<div class="clear"></div><span>اردیبهشت ۲۷ , ۱۳۹۶</span>
+											</div>
+				</li>
+			</ul></div></div><div class="tab-inner-warp" style="display: none;"><div class="tab-inner"><ul class="related-posts">				<li class="related-item">
+											<div class="author-img">
+							<a href="https://programchi.ir/2018/08/27/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-%d8%af%db%8c%d8%aa%d8%a7%d8%a8%db%8c%d8%b3-room-%d8%af%d8%b1-%d8%a7%d9%86%d8%af%d8%b1%d9%88%db%8c%d8%af/" title="آموزش دیتابیس Room در اندروید" rel="bookmark">
+								<img alt="آموزش دیتابیس Room در اندروید" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/android-room-persistence-min-60x60.png" width="60" height="60">							</a>
+						</div>
+										<div class="questions-div">
+						<h3>
+							<a href="https://programchi.ir/2018/08/27/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-%d8%af%db%8c%d8%aa%d8%a7%d8%a8%db%8c%d8%b3-room-%d8%af%d8%b1-%d8%a7%d9%86%d8%af%d8%b1%d9%88%db%8c%d8%af/" title="آموزش دیتابیس Room در اندروید" rel="bookmark">
+								آموزش دیتابیس Room در اندروید							</a>
+						</h3>
+													<p>سلام توسعه دهندگان گرامی در این سری از آموزش برنامه نویسی اندروید به&nbsp;آموزش دیتابیس Room در اندروید می پردازیم قبلا ...</p>
+													<div class="clear"></div><span>شهریور ۵ , ۱۳۹۷</span>
+											</div>
+				</li>
+							<li class="related-item">
+											<div class="author-img">
+							<a href="https://programchi.ir/2018/08/27/intent-filter-%da%86%db%8c%d8%b3%d8%aa-%d8%9f/" title="Intent Filter چیست ؟" rel="bookmark">
+								<img alt="Intent Filter چیست ؟" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/scientific-what-is-intent-filter-in-android-min-60x60.png" width="60" height="60">							</a>
+						</div>
+										<div class="questions-div">
+						<h3>
+							<a href="https://programchi.ir/2018/08/27/intent-filter-%da%86%db%8c%d8%b3%d8%aa-%d8%9f/" title="Intent Filter چیست ؟" rel="bookmark">
+								Intent Filter چیست ؟							</a>
+						</h3>
+													<p>سلام دوستان عزیز در این مقاله به بررسی تگ&nbsp;Intent Filter می پردازیم&nbsp;Intent Filter چیست ؟ شاید سوالی باشد که ذهن ...</p>
+													<div class="clear"></div><span>شهریور ۵ , ۱۳۹۷</span>
+											</div>
+				</li>
+							<li class="related-item">
+											<div class="author-img">
+							<a href="https://programchi.ir/2018/08/25/%d8%af%db%8c%d8%aa%d8%a7%d8%a8%db%8c%d8%b3-room-%da%86%db%8c%d8%b3%d8%aa-%d8%9f/" title="دیتابیس Room چیست ؟" rel="bookmark">
+								<img alt="دیتابیس Room چیست ؟" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/scientific-what-is-room-database-min-60x60.png" width="60" height="60">							</a>
+						</div>
+										<div class="questions-div">
+						<h3>
+							<a href="https://programchi.ir/2018/08/25/%d8%af%db%8c%d8%aa%d8%a7%d8%a8%db%8c%d8%b3-room-%da%86%db%8c%d8%b3%d8%aa-%d8%9f/" title="دیتابیس Room چیست ؟" rel="bookmark">
+								دیتابیس Room چیست ؟							</a>
+						</h3>
+													<p>سلام توسعه دهندگان عزیز در این مقاله به بررسی&nbsp;دیتابیس Room چیست ؟ می پردازیم دیتابیس Room توسط Google در سال ...</p>
+													<div class="clear"></div><span>شهریور ۳ , ۱۳۹۷</span>
+											</div>
+				</li>
+			</ul></div></div><div class="tab-inner-warp" style="display: none;"><div class="tab-inner"><div class="widget_highest_points widget_comments"><ul>		    <li>
+		    	<div class="author-img">
+		    					    		<a href="https://programchi.ir/author/admin/">
+	    			<img alt="محمد حسین جعفری پور" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/photo_2018-06-24_01-56-50-65x65.jpg">			    		</a>
+		    				    	</div> 
+		    	<h6><a href="https://programchi.ir/2017/08/30/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-%d9%82%d8%b1%d8%a7%d8%b1-%d8%af%d8%a7%d8%af%d9%86-%d8%a7%d9%be%d9%84%db%8c%da%a9%db%8c%d8%b4%d9%86-%d8%af%d8%b1-google-play/#comment-5409">محمد حسین جعفری پور : سلام بهتره انگلیسی ا</a></h6>
+		    </li>
+		    		    <li>
+		    	<div class="author-img">
+		    		<img alt="" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/7253effe99e852aa010229c081b9c423.jpeg" srcset="https://secure.gravatar.com/avatar/7253effe99e852aa010229c081b9c423?s=130&amp;d=mm&amp;r=g 2x" class="avatar avatar-65 photo" width="65" height="65">		    	</div> 
+		    	<h6><a href="https://programchi.ir/2017/07/11/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-unzip-%da%a9%d8%b1%d8%af%d9%86-%d9%81%d8%a7%db%8c%d9%84-zip-%d8%af%d8%b1-%d8%a8%d8%b1%d9%86%d8%a7%d9%85%d9%87-%d9%86%d9%88%db%8c%d8%b3%db%8c-%d8%a7%d9%86%d8%af%d8%b1/#comment-5408">سید ابوالفضل موسوی : با سلام من از کدی که</a></h6>
+		    </li>
+		    		    <li>
+		    	<div class="author-img">
+		    		<img alt="" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/7253effe99e852aa010229c081b9c423.jpeg" srcset="https://secure.gravatar.com/avatar/7253effe99e852aa010229c081b9c423?s=130&amp;d=mm&amp;r=g 2x" class="avatar avatar-65 photo" width="65" height="65">		    	</div> 
+		    	<h6><a href="https://programchi.ir/2017/08/30/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-%d9%82%d8%b1%d8%a7%d8%b1-%d8%af%d8%a7%d8%af%d9%86-%d8%a7%d9%be%d9%84%db%8c%da%a9%db%8c%d8%b4%d9%86-%d8%af%d8%b1-google-play/#comment-5407">elif : سلام. جایی که میخواه</a></h6>
+		    </li>
+		    </ul></div></div></div></div></div><div id="stats-widget-4" class="widget stats-widget"><h3 class="widget_title">آمار</h3>			<div class="widget_stats ul_list ul_list-icon-ok">
+				<ul>
+					<li><i class="icon-question-sign"></i>سوالات ( <span>638</span> )</li>
+					<li><i class="icon-comment"></i>پاسخ ها ( <span>1797</span> )</li>
+					<li><i class="icon-comments"></i>بهترین پاسخ ( <span>407</span> )</li>
+					<li><i class="icon-user"></i>کاربران ( <span>443</span> )</li>
+				</ul>
+			</div>
+			</div><div id="highest-points-widget-4" class="widget highest-points-widget"><h3 class="widget_title">امتیازات بالا</h3>				<div class="widget_highest_points">
+					<ul>
+													<li>
+								<div class="author-img">
+									<a href="https://programchi.ir/author/admin/">
+										<img alt="محمد حسین جعفری پور" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/photo_2018-06-24_01-56-50-65x65.jpg">									</a>
+								</div>
+								<div class="author-content">
+									<h6><a href="https://programchi.ir/author/admin/">محمد حسین جعفری پور</a></h6>
+																		<span class="comment" style="float: none;">1661 امتیاز</span>
+								</div>
+								<div class="clearfix"></div>
+							</li>
+													<li>
+								<div class="author-img">
+									<a href="https://programchi.ir/author/hjmcoder/">
+										<img alt="hjmcoder" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/photo_2017-06-18_04-51-16-65x65.jpg">									</a>
+								</div>
+								<div class="author-content">
+									<h6><a href="https://programchi.ir/author/hjmcoder/">hjmcoder</a></h6>
+																		<span class="comment" style="float: none;">100 امتیاز</span>
+								</div>
+								<div class="clearfix"></div>
+							</li>
+													<li>
+								<div class="author-img">
+									<a href="https://programchi.ir/author/sepehr/">
+										<img alt="" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/e047849081840d18490e698157d39638.jpeg" srcset="https://secure.gravatar.com/avatar/e047849081840d18490e698157d39638?s=120&amp;d=mm&amp;r=g 2x" class="avatar avatar-60 photo" width="60" height="60">									</a>
+								</div>
+								<div class="author-content">
+									<h6><a href="https://programchi.ir/author/sepehr/">سپهر</a></h6>
+																		<span class="comment" style="float: none;">86 امتیاز</span>
+								</div>
+								<div class="clearfix"></div>
+							</li>
+													<li>
+								<div class="author-img">
+									<a href="https://programchi.ir/author/ramroid/">
+										<img alt="Ʀαʍιπ" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/Untitled-65x65.png">									</a>
+								</div>
+								<div class="author-content">
+									<h6><a href="https://programchi.ir/author/ramroid/">Ʀαʍιπ</a></h6>
+																		<span class="comment" style="float: none;">33 امتیاز</span>
+								</div>
+								<div class="clearfix"></div>
+							</li>
+													<li>
+								<div class="author-img">
+									<a href="https://programchi.ir/author/amirsobhan/">
+										<img alt="" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/ec635e421e50c8d647dc3d37f6858be5.jpeg" srcset="https://secure.gravatar.com/avatar/ec635e421e50c8d647dc3d37f6858be5?s=120&amp;d=mm&amp;r=g 2x" class="avatar avatar-60 photo" width="60" height="60">									</a>
+								</div>
+								<div class="author-content">
+									<h6><a href="https://programchi.ir/author/amirsobhan/">امیر محمد نفریه</a></h6>
+																		<span class="comment" style="float: none;">24 امتیاز</span>
+								</div>
+								<div class="clearfix"></div>
+							</li>
+											</ul>
+				</div>
+				</div><div id="login-widget-2" class="widget login-widget"><h3 class="widget_title">ورود</h3>				<div class="widget_login">
+					<div class="form-style form-style-2">
+							<div class="ask_form inputs">
+			<form class="login-form ask_login" action="https://programchi.ir/" method="post">
+				<div class="ask_error"></div>
+				
+				<div class="form-inputs clearfix">
+					<p class="login-text">
+						<input class="required-item" value="نام کاربری" onfocus="if (this.value == 'نام کاربری') {this.value = '';}" onblur="if (this.value == '') {this.value = 'نام کاربری';}" name="log" type="text">
+						<i class="icon-user"></i>
+					</p>
+					<p class="login-password">
+						<input class="required-item" value="Password" onfocus="if (this.value == 'Password') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Password';}" name="pwd" type="password">
+						<i class="icon-lock"></i>
+						<a href="#">فراموشی رمز</a>
+					</p>
+				</div>
+				<p class="form-submit login-submit">
+					<span class="loader_2"></span>
+					<input value="ورود" class="button color small login-submit submit sidebar_submit" style="" type="submit">
+					
+				</p>
+				<div class="rememberme">
+					<label><input input="" name="rememberme" checked="checked" type="checkbox"> مرا به خاطر بسپار</label>
+				</div>
+				
+				<input name="redirect_to" value="https://programchi.ir/2018/08/24/restful-%da%86%db%8c%d8%b3%d8%aa-%d8%9f/" type="hidden">
+				<input name="login_nonce" value="37db0eb5b0" type="hidden">
+				<input name="ajax_url" value="https://programchi.ir/wp-admin/admin-ajax.php" type="hidden">
+				<input name="form_type" value="ask-login" type="hidden">
+				<div class="errorlogin"></div>
+			</form>
+		</div><ul class="login-links login-links-r">
+									<li><a href="#">عضویت</a></li>
+								</ul><div class="clearfix"></div>
+						</div>				</div>
+				</div><div id="subscribe-widget-2" class="widget subscribe-widget"><h3 class="widget_title">عضویت در خبرنامه</h3>	
+			<div class="subscribe_widget">
+			    <p class="subscribe_text"></p>
+				<div class="clearfix"></div>
+				<div class="form-style form-style-2">
+				    <form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+				        <p class="subscribe-text">
+					        <input name="email" value="ایمیل" onfocus="if(this.value=='ایمیل')this.value='';" onblur="if(this.value=='')this.value='ایمیل';" type="text">
+					        <i class="icon-rss"></i>
+				        </p>
+				        <input value="" name="uri" type="hidden">
+				        <input name="loc" value="en_US" type="hidden">	
+				        <input name="submit" id="submit" class="button color small sidebar_submit" value="عضویت" style="" type="submit">
+				    </form>
+				</div>
+			</div>
+		</div>					</aside><!-- End sidebar -->
+								<div class="clearfix"></div>
+			</div><!-- End with-sidebar-container -->
+		</div><!-- End row -->
+	</section><!-- End container -->
+				<footer id="footer" class="footer_dark">
+				<section class="container">
+					<div class="row">
+													<div class="col-md-3">
+															</div>
+							<div class="col-md-3">
+															</div>
+							<div class="col-md-3">
+															</div>
+							<div class="col-md-3">
+															</div>
+											</div><!-- End row -->
+				</section><!-- End container -->
+			</footer><!-- End footer -->
+			<footer id="footer-bottom" class="">
+		<section class="container">
+			<div class="copyrights f_left">تمامی حقوق برای programchi محفوظ است.</div>
+					</section><!-- End container -->
+	</footer><!-- End footer-bottom -->
+</div><!-- End wrap -->
+
+<div class="go-up" style="right: -60px;"><i class="icon-chevron-up"></i></div>
+<a class="telchannel" href="https://telegram.me/programchii" target="blank"> <img src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/telegram-for-desktop-07-535x535-min.png"></a><script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/programchi.ir\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"\u0644\u0637\u0641\u0627 \u062a\u0627\u06cc\u06cc\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f \u06a9\u0647 \u0634\u0645\u0627 \u06cc\u06a9 \u0631\u0628\u0627\u062a \u0646\u06cc\u0633\u062a\u06cc\u062f."}},"cached":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/scripts.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var dot_irecommendthis = {"ajaxurl":"https:\/\/programchi.ir\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/dot_irecommendthis.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"\u0645\u0634\u0627\u0647\u062f\u0647 \u0633\u0628\u062f \u062e\u0631\u06cc\u062f","cart_url":"https:\/\/programchi.ir\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/add-to-cart.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/jquery_002.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/js.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/woocommerce_002.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_3d0f308a2339a0c8d5296a217a557645","fragment_name":"wc_fragments_3d0f308a2339a0c8d5296a217a557645"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/cart-fragments.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/modernizr.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/comment-reply.js"></script>
+<script type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/wp-embed.js"></script>
+<script async="async" type="text/javascript" src="RESTful%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F%20-%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C_files/form.js"></script>
+
+<div id="ascrail2000" class="nicescroll-rails" style="width: 6px; z-index: 9999999; cursor: default; position: fixed; top: 0px; height: 100%; right: 0px; opacity: 1;"><div style="position: relative; top: 0px; float: right; width: 6px; height: 69px; background-color: rgb(187, 187, 187); border: 0px none; background-clip: padding-box; border-radius: 0px;"></div></div></body></html>

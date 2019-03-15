@@ -1,0 +1,11 @@
+Illuminate\Support\Collection::__set_state(array(
+   'items' => 
+  array (
+    0 => 
+    stdClass::__set_state(array(
+       'attr_id' => '48',
+       'title' => 'test',
+       'parent_title' => 'حداکثر ارتفاع',
+    )),
+  ),
+))
