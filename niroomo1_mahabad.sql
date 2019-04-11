@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 16, 2019 at 12:48 AM
+-- Generation Time: Apr 11, 2019 at 04:54 PM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.7
 
@@ -748,7 +748,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'niroomohareke', 'niroomohareke@gmail.com', '$2y$10$ac0aVZ.azwN0aO8z6EoK5OGAyNYYCH55UOcTqftNFhXP1YFjl/eX2', 'JLAPnuXHxiHS7hqoEWMIb99WbH660AFAr8FiSBbKAmOHQs7n9ihRjWZJEql0', '2018-09-10 02:36:29', '2018-09-10 02:36:29');
+(1, 'niroomohareke', 'niroomohareke@gmail.com', '$2y$10$ac0aVZ.azwN0aO8z6EoK5OGAyNYYCH55UOcTqftNFhXP1YFjl/eX2', 'fqgLqYfULNuqNqVwqbxUdS2LgaE83o6TRfOYkR3W7cJYtRC5pCqqCrGx9MmC', '2018-09-10 02:36:29', '2018-09-10 02:36:29');
 
 --
 -- Indexes for dumped tables
